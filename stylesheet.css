@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: #23232c;
+    font-family: monospace;
+    color: azure;
+
+}
+#canvas{
+    margin: auto;
+    background-color: #e88b16;
+    font-family: monospace;
+}
+
+fieldset {
+    width: 100%;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+input:invalid {
+    box-shadow: 0 0 5px 1px #fa8d8d;
+}
+
+input:focus:invalid {
+    box-shadow: none;
+}
+table{
+    width: 100%;
+    padding-left: 50%;
+}
+button{
+    border:1px #1d1d38 ;
+    border-radius: 7px;
+
+}
+input[type="text"] {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: #b0c51e;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    background-color: #d0f52c;
+}
+button{
+
+    text-align: center;
+    padding: 10px 25px;
+    margin: 25px 15px 15px 25px;
+    border: 2px solid #34c7a5;
+    border-radius: 5px;
+    background-color: #1f2125;
+    color: #c5b91f;
+}
+/*селектор псевдоклассов*/
+.submit:hover {
+    background-color: #c0f834;
+    color: #1f2125;
+    transition: .5s;
+    border: 1px solid #103b31;
+
+}
+.reset:hover{
+    background-color: #fe6262;
+    color: #1f2125;
+    transition: .5s;
+    border: 1px solid #103b31;
+}

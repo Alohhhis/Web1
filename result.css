@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: #23232c;
+    color: azure;
+}
+table{
+    border: 1px black solid;
+    padding: 20%;
+}
+tr th{
+    width: auto;
+    padding: 20px;
+    margin: 10%;
+    font-weight: bold;
+    color: #e88b16;
+}
+tr{
+    padding: 10%;
+}
+img{
+    width: 354px;
+    height: 529px;
+}
+thead{
+    color: #e88b16;
+}

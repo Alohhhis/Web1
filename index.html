@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alohhis"/>
+    <title>Lab 1</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script defer src = "FormChecker.js"></script>
+
+</head>
+<body>
+    <form class = "js-form" id = "form" action="index.php" method="POST">
+        <table>
+
+            <tr>
+
+                <td>
+                    <h1>Докшина Алёна Максимовна <br>
+                        P3221, вариант 3105</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                        <fieldset>
+                    <legend>
+                        <b>Координата x (от -5 до 3):</b>
+                        <abbr title="Это поле обязательное" aria-label="required">&nbsp</abbr>
+                    </legend>
+                        </fieldset>
+
+                    <p><input type="radio" required name="x" value="-5"/>-5
+                        <input type="radio" name="x" value="-4"/>-4
+                        <input type="radio" name="x" value="-3"/>-3
+                        <input type="radio" name="x" value="-2"/>-2
+                        <input type="radio" name="x" value="-1"/>-1
+                        <input type="radio" name="x" value="0"/>0
+                        <input type="radio" name="x" value="1"/>1
+                        <input type="radio" name="x" value="2"/>2
+                        <input type="radio" name="x" value="3"/>3</p>
+                </td>
+                <!--
+                <td>
+                    <p><b>Координата x (от -5 до 3):</b></p>
+                </td>
+                <td>
+                    <p><input type="radio" required name="x" value="-5"/>-5
+                    <input type="radio" name="x" value="-4"/>-4
+                    <input type="radio" name="x" value="-3"/>-3
+                    <input type="radio" name="x" value="-2"/>-2
+                    <input type="radio" name="x" value="-1"/>-1
+                    <input type="radio" name="x" value="0"/>0
+                    <input type="radio" name="x" value="1"/>1
+                    <input type="radio" name="x" value="2"/>2
+                    <input type="radio" name="x" value="3"/>3</p>
+                </td>
+                -->
+            </tr>
+
+            <tr>
+                <td>
+                    <p><b>Координата Y (от -3 до 5):</b></p>
+                </td>
+
+                <td>
+                    <p><input type="text" class="js-text-input" name="yCoord" id = "y"  minlength="1" placeholder="Значение Y: [-3;5]" oninput="validation()" required>
+                </td>
+            </tr>
+
+            <script type="text/javascript">
+                function validation(){
+                    let input = document.querySelector(".js-text-input");
+                    let y = input.value;
+                    let regex = "^(\\-|\\+)?\\d+(\\,|.\\d+)?$";
+
+                    if (y === ''){
+                        input.style.background = "";
+                    }
+                    else {
+                        if (!y.match(regex)||y<-3 || y>5) {
+                            input.style.background = "#e75555";
+                        } else {
+                            input.style.background = "#a6f35f";
+                        }
+                    }
+                }
+            </script>
+
+            <tr>
+
+                <td>
+                    <p><b>Радиус R (от 1 до 5): </b></p>
+                </td>
+
+                <td>
+                    <p>
+                        <input type="checkbox" name="Radius" class = "radius" value="1"/>1
+                        <input type="checkbox" name="Radius" class = "radius" value="2"/>2
+                        <input type="checkbox" name="Radius" class = "radius" value="3"/>3
+                        <input type="checkbox" name="Radius" class = "radius" value="4"/>4
+                        <input type="checkbox" name="Radius" class = "radius" value="5"/>5
+
+                    </p>
+                </td>
+                <!--
+                <td>
+                    <p>
+                    <fieldset>
+                        <legend>
+                            <b>Радиус R (от 1 до 5): </b>
+                            <abbr title="Это поле обязательное" aria-label="required">&nbsp</abbr>
+                        </legend>
+                    </fieldset>
+                    </p>
+                    <p>
+                        <input type="checkbox" required name="Radius" class = "radius" value="1"/>1
+                        <input type="checkbox" required name="Radius" class = "radius" value="2"/>2
+                        <input type="checkbox" required name="Radius" class = "radius" value="3"/>3
+                        <input type="checkbox" required name="Radius" class = "radius" value="4"/>4
+                        <input type="checkbox" required name="Radius" class = "radius" value="5"/>5
+                    </p>
+                </td>
+                -->
+            </tr>
+
+
+
+            <tr>
+                <td>
+                    <button type="submit" class="submit">Отправить</button>
+                </td>
+
+                <td>
+                    <button type="reset" class="reset">Сбросить</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="line-height: 80px;"  colspan = 3>&nbsp</td>
+            </tr>
+
+            <tr>
+                <td>
+                    График
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" >
+                    <canvas id = "canvas" width="600" height="600">
+                        <script src = "GraphDraw.js"></script>
+                    </canvas>
+
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
